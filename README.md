@@ -45,17 +45,45 @@ Figure -02 HALF Subtractor
 
 4.	Create nodes for inputs and outputs to generate the timing diagram.
 
-5.	For different input combinations generate the timing diagram.
+5.	For differentinput combinations generate the timing diagram.
 
 
 **Program:**
-
-/* Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
-
-Developed by: RegisterNumber:*/
+Half_adder
+```
+module halfadd_top(a,b,sum,carry);
+input a,b;
+output sum,carry; 
+assign sum = a^b;
+assign carry = a & b;
+endmodule
+```
+Half subtractor
+```
+module halfsub_top(a,b,D,Bo);
+input a,b;
+output D,Bo; 
+assign D = a ^ b;
+assign Bo = ~a & b;
+endmodule
+```
+Developed by:Prabanjan.R
+RegisterNumber:24900174
+*/
 
 **RTL Schematic**
+**half adder**
+![image](https://github.com/user-attachments/assets/14e30b05-0a2c-4783-9233-099b44c90386)
+**half subtractor**
+![image](https://github.com/user-attachments/assets/11a64f2c-b652-4373-80af-3c068fcc57a0)
 
 **Output/TIMING Waveform**
+**half adder**
+![image](https://github.com/user-attachments/assets/50d50716-6b94-49be-9ce3-b12231c7897f)
+**half subtractor**
+![image](https://github.com/user-attachments/assets/b32488ff-f6b0-4ad3-833f-e0a282b0ce79)
+
+
 
 **Result:**
+Thus the half adder and half subtractor circuit are implemented using and their operations are verified using Verilog programming.
